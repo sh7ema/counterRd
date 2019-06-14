@@ -10,7 +10,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { environment } from '../environments/environment';
-import {RobotServise} from './robot.servise';
+import {RobotService} from './robot.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import {RobotServise} from './robot.servise';
     AngularFireDatabaseModule
   ],
   providers: [
-    RobotServise,
+    RobotService,
     AngularFirestore
   ],
   bootstrap: [AppComponent]
