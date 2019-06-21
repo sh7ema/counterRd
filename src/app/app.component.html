@@ -1,9 +1,9 @@
 <div fxLayot="column">
   <div fxLayoutAlign="center">
-    <h1>({{ robotItem.itemId | async}})</h1>
+    <h1 *ngFor="let robot of robotItem | async">{{ robot.itemId}}</h1>
   </div>
   <div fxLayoutAlign="center">
-    <button mat-flat-button color="primary" (click)="setName()">Primary</button>
+    <button mat-flat-button color="primary">Primary</button>
   </div>
   <div fxLayoutAlign="center">
     <button mat-fab color="primary">+</button>
