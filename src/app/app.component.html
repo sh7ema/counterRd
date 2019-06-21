@@ -1,6 +1,6 @@
 <div fxLayot="column">
   <div fxLayoutAlign="center">
-    <h1>({{ robotItem.itemId | async}})</h1>
+    <h1>({{ (robotItem | async)?.itemId}})</h1>
   </div>
   <div fxLayoutAlign="center">
     <button mat-flat-button color="primary" (click)="setName()">Primary</button>
