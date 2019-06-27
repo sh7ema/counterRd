@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
 import {Item, RobotService} from './robot.service';
-import {Observable} from 'rxjs';
+import {from, Observable} from 'rxjs';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -11,6 +12,7 @@ import {Observable} from 'rxjs';
 })
 export class AppComponent implements OnInit {
   robotItem: Observable<Item>;
+
   constructor(private robotSevise: RobotService) {
     this.robotItem = this.robotSevise.getRobot();
   }
@@ -20,6 +22,10 @@ export class AppComponent implements OnInit {
 
   setName() {
     void this.robotSevise.setName(123123);
+  }
+
+  setRobot() {
+    return this.robotSevise.addRobot();
   }
 
 }
